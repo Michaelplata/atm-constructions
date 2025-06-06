@@ -1,0 +1,32 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": [
+        "cloudformation:*",
+        "amplify:*",
+        "s3:*",
+        "iam:ListRoles",
+        "iam:GetRole",
+        "iam:PassRole",
+        "lambda:*",
+        "apigateway:*",
+        "dynamodb:*",
+        "cognito-identity:*",
+        "cognito-idp:*",
+        "cloudfront:*",
+        "route53:*",
+        "acm:*",
+        "ssm:*",
+        "logs:*",
+        "kms:*",
+        "ec2:DescribeAvailabilityZones",
+        "ec2:DescribeVpcs",
+        "ec2:DescribeSubnets",
+        "ec2:DescribeSecurityGroups"
+      ],
+      "Resource": "*"
+    }
+  ]
+}

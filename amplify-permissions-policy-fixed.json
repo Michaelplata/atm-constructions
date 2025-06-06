@@ -1,0 +1,15 @@
+{
+  "Version": "2012-10-17",
+  "Statement": [
+    {
+      "Effect": "Allow",
+      "Action": "amplify:*",
+      "Resource": "arn:aws:amplify:eu-west-1:564045267146:apps/*"
+    },
+    {
+      "Effect": "Allow",
+      "Action": "iam:GetUser",
+      "Resource": "arn:aws:iam::564045267146:user/MichaelPlata"
+    }
+  ]
+}
