@@ -19,95 +19,176 @@ const Testimonials = () => (
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
-            {[
-              {
-                text: 'ATM Constructions transformed our kitchen beautifully. Their attention to detail and professionalism exceeded our expectations.',
-                author: 'Sarah Johnson',
-                role: 'Homeowner',
-                location: 'Philadelphia',
-              },
-              {
-                text: 'Outstanding commercial renovation work. They completed our office remodel on time and within budget. Highly recommended!',
-                author: 'Michael Chen',
-                role: 'Business Owner',
-                location: 'Cherry Hill',
-              },
-              {
-                text: "The team's craftsmanship is exceptional. They truly understand how to bring architectural visions to life.",
-                author: 'David Williams',
-                role: 'Property Manager',
-                location: 'Bucks County',
-              },
-              {
-                text: 'We were impressed by their innovative solutions for our basement renovation. The results were beyond what we imagined.',
-                author: 'Emily Rodriguez',
-                role: 'Homeowner',
-                location: 'Montgomery County',
-              },
-              {
-                text: 'Their team showed great expertise in historical building renovation. They preserved the character while modernizing the space.',
-                author: 'Robert Thompson',
-                role: 'Historical Society Director',
-                location: 'Old City',
-              },
-              {
-                text: 'The bathroom remodel was flawless. Their attention to waterproofing and fixture installation was impressive.',
-                author: 'Lisa Parker',
-                role: 'Homeowner',
-                location: 'Main Line',
-              },
-              {
-                text: 'ATM handled our restaurant renovation with minimal disruption to our business. The result was stunning!',
-                author: 'James Kim',
-                role: 'Restaurant Owner',
-                location: 'Center City',
-              },
-              {
-                text: 'They transformed our outdated retail space into a modern showroom. The craftsmanship is outstanding.',
-                author: 'Amanda Foster',
-                role: 'Retail Manager',
-                location: 'King of Prussia',
-              },
-              {
-                text: 'Professional, punctual, and perfect execution. Our medical office renovation exceeded expectations.',
-                author: 'Dr. Mark Sullivan',
-                role: 'Medical Director',
-                location: 'Bryn Mawr',
-              },
-            ].map((testimonial, index) => (
-              <div
-                key={index}
-                className="rounded-lg bg-white p-8 shadow-lg transition-transform duration-300 hover:scale-105"
-              >
-                <div className="mb-4">
+          {/* Testimonials Carousel */}
+          <div className="relative">
+            {/* Desktop View - 3 columns */}
+            <div className="hidden gap-10 md:grid md:grid-cols-3">
+              {[
+                {
+                  text: 'ATM Constructions transformed our kitchen beautifully. Their attention to detail and professionalism exceeded our expectations.',
+                  author: 'Sarah Johnson',
+                  role: 'Homeowner',
+                  location: 'Philadelphia',
+                  image: '/assets/images/testimonial-1.jpg',
+                },
+                {
+                  text: 'Outstanding commercial renovation work. They completed our office remodel on time and within budget. Highly recommended!',
+                  author: 'Michael Chen',
+                  role: 'Business Owner',
+                  location: 'Cherry Hill',
+                  image: '/assets/images/testimonial-2.jpg',
+                },
+                {
+                  text: "The team's craftsmanship is exceptional. They truly understand how to bring architectural visions to life.",
+                  author: 'David Williams',
+                  role: 'Property Manager',
+                  location: 'Bucks County',
+                  image: '/assets/images/testimonial-3.jpg',
+                },
+              ].map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="rounded-xl border-b-4 border-tertiary bg-white p-8 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                >
+                  <div className="mb-4 flex items-center justify-between">
+                    <svg
+                      className="size-10 text-tertiary"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+                    </svg>
+                    <div className="flex items-center">
+                      {[1, 2, 3, 4, 5].map((star) => (
+                        <svg
+                          key={star}
+                          className="size-5 text-yellow-400"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
+                  </div>
+
+                  <p className="mb-6 text-lg leading-relaxed text-gray-700">
+                    {testimonial.text}
+                  </p>
+
+                  <div className="flex items-center border-t border-gray-200 pt-4">
+                    <div className="mr-4 size-12 overflow-hidden rounded-full bg-gray-200">
+                      {/* Placeholder for profile image */}
+                      <div className="flex size-full items-center justify-center bg-primary-300 text-xl font-bold text-white">
+                        {testimonial.author.charAt(0)}
+                      </div>
+                    </div>
+                    <div>
+                      <p className="font-bold text-[#2B558B]">
+                        {testimonial.author}
+                      </p>
+                      <p className="text-sm text-[#6A8AB2]">
+                        {testimonial.role} • {testimonial.location}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Mobile View - Single Column */}
+            <div className="md:hidden">
+              <div className="rounded-xl border-b-4 border-tertiary bg-white p-8 shadow-xl">
+                <div className="mb-4 flex items-center justify-between">
                   <svg
-                    className="size-8 text-[#C5715E]"
+                    className="size-10 text-tertiary"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
                     <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                   </svg>
+                  <div className="flex items-center">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <svg
+                        key={star}
+                        className="size-5 text-yellow-400"
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                      >
+                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118l-2.8-2.034c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                      </svg>
+                    ))}
+                  </div>
                 </div>
 
-                <p className="mb-6 text-gray-600">{testimonial.text}</p>
+                <p className="mb-6 text-lg leading-relaxed text-gray-700">
+                  ATM Constructions transformed our kitchen beautifully. Their
+                  attention to detail and professionalism exceeded our
+                  expectations.
+                </p>
 
-                <div className="border-t border-gray-200 pt-4">
-                  <p className="font-semibold text-[#2B558B]">
-                    {testimonial.author}
-                  </p>
-                  <p className="text-sm text-[#6A8AB2]">
-                    {testimonial.role} • {testimonial.location}
-                  </p>
+                <div className="flex items-center border-t border-gray-200 pt-4">
+                  <div className="mr-4 size-12 overflow-hidden rounded-full bg-gray-200">
+                    <div className="flex size-full items-center justify-center bg-primary-300 text-xl font-bold text-white">
+                      S
+                    </div>
+                  </div>
+                  <div>
+                    <p className="font-bold text-[#2B558B]">Sarah Johnson</p>
+                    <p className="text-sm text-[#6A8AB2]">
+                      Homeowner • Philadelphia
+                    </p>
+                  </div>
                 </div>
               </div>
-            ))}
+
+              {/* Pagination dots for mobile */}
+              <div className="mt-6 flex justify-center space-x-2">
+                <div className="size-2 rounded-full bg-white"></div>
+                <div className="size-2 rounded-full bg-white/50"></div>
+                <div className="size-2 rounded-full bg-white/50"></div>
+              </div>
+            </div>
+
+            {/* Navigation arrows */}
+            <div className="hidden md:block">
+              <button className="absolute -left-4 top-1/2 -translate-y-1/2 rounded-full bg-white p-2 shadow-lg hover:bg-gray-100">
+                <svg
+                  className="size-6 text-gray-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button className="absolute -right-4 top-1/2 -translate-y-1/2 rounded-full bg-white p-2 shadow-lg hover:bg-gray-100">
+                <svg
+                  className="size-6 text-gray-600"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
           </div>
 
           <div className="mt-12 text-center">
             <Link
               href="#contact"
-              className="inline-flex items-center rounded-md border border-transparent bg-[#C5715E] px-6 py-3 text-base font-medium text-white transition-colors duration-300 hover:bg-[#b4604f]"
+              className="inline-flex items-center rounded-md border border-transparent bg-tertiary px-6 py-3 text-base font-medium text-white transition-colors duration-300 hover:bg-[#b4604f]"
             >
               Get Your Free Quote Today
             </Link>
