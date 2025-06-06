@@ -3,15 +3,19 @@ import className from 'classnames';
 type IButtonProps = {
   xl?: boolean;
   children: string;
+  className?: string;
 };
 
 const Button = (props: IButtonProps) => {
-  const btnClass = className({
-    btn: true,
-    'btn-xl': props.xl,
-    'btn-base': !props.xl,
-    'btn-primary': true,
-  });
+  const btnClass = className(
+    {
+      btn: true,
+      'btn-xl': props.xl,
+      'btn-base': !props.xl,
+      'btn-primary': true,
+    },
+    props.className,
+  );
 
   return (
     <div className={btnClass}>

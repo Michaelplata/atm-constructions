@@ -3,27 +3,21 @@ import { Section } from '../layout/Section';
 
 const VerticalFeatures = () => (
   <Section
-    title="Your title here"
-    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus malesuada nisi tellus, non imperdiet nisi tempor at."
+    title="Our Services"
+    description="Comprehensive Construction Services for Homes and Businesses"
   >
     <VerticalFeatureRow
-      title="Your title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-      image="/assets/images/feature.svg"
+      title="Home Services"
+      description="Whether you're dreaming of a modern kitchen, a cozy family room, or a complete home makeover, our experienced team is here to guide you through every step. We combine skilled craftsmanship with friendly service to make your renovation journey smooth and enjoyable."
+      image="/assets/images/outsite-co-R-LK3sqLiBw-unsplash.jpg"
       imageAlt="First feature alt text"
     />
     <VerticalFeatureRow
-      title="Your title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-      image="/assets/images/feature2.svg"
+      title="Commercial Services"
+      description="Whether you need a modern office renovation, retail space optimization, or a complete commercial transformation, our experienced team delivers results that work for your business. We combine industry expertise with practical solutions to create spaces that drive success."
+      image="/assets/images/AdobeStock_831075455.jpeg"
       imageAlt="Second feature alt text"
       reverse
-    />
-    <VerticalFeatureRow
-      title="Your title here"
-      description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse bibendum, nunc non posuere consectetur, justo erat semper enim, non hendrerit dui odio id enim."
-      image="/assets/images/feature3.svg"
-      imageAlt="Third feature alt text"
     />
   </Section>
 );
