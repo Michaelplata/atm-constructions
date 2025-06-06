@@ -26,15 +26,18 @@ const Hero = () => (
       {/* Navigation Section with semi-transparent background */}
       <Section yPadding="py-8">
         <div className="flex items-center justify-between">
-          <div className="rounded-lg bg-white/10 p-3 shadow-lg backdrop-blur-sm">
-            <Logo xl className="md:scale-120 lg:scale-135 drop-shadow-md" />
+          <div className="rounded-lg bg-white/10 p-2 shadow-lg backdrop-blur-sm md:p-3">
+            <Logo
+              xl
+              className="scale-75 drop-shadow-md sm:scale-90 md:scale-100 lg:scale-110"
+            />
           </div>
 
           <Link
             href="tel:+1(267) 774-1222"
-            className="font-['Helvetica'] text-lg font-light tracking-wide text-white drop-shadow-md transition-colors hover:text-tertiary md:text-3xl lg:text-2xl"
+            className="font-['Helvetica'] text-sm font-light tracking-wide text-white drop-shadow-md transition-colors hover:text-tertiary sm:text-base md:text-xl lg:text-2xl"
           >
-            tel:+1(267) 774-1222
+            +1(267) 774-1222
           </Link>
         </div>
       </Section>

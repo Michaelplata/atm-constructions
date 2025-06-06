@@ -4,13 +4,16 @@ type ILogoProps = {
 };
 
 const Logo = (props: ILogoProps) => {
-  const size = props.xl ? '300' : '120';
+  // Responsive sizing based on screen size
+  const size = props.xl ? '180' : '100';
   const fontStyle = props.xl
     ? 'font-semibold text-3xl'
     : 'font-semibold text-xl';
 
   return (
-    <span className={`inline-flex items-center text-gray-900 ${fontStyle}`}>
+    <span
+      className={`inline-flex items-center text-gray-900 ${fontStyle} ${props.className || ''}`}
+    >
       <svg
         id="Layer_1"
         xmlns="http://www.w3.org/2000/svg"
@@ -18,6 +21,7 @@ const Logo = (props: ILogoProps) => {
         viewBox="0 0 400 400"
         width={size}
         height={size}
+        className="h-auto max-w-full"
       >
         <defs>
           <style>
