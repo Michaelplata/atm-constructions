@@ -4,7 +4,6 @@ import { Background } from '../background/Background';
 import { Button } from '../button/Button';
 import { HeroOneButton } from '../hero/HeroOneButton';
 import { Section } from '../layout/Section';
-// import { NavbarTwoColumns } from '../navigation/NavbarTwoColumns';
 import { Logo } from './Logo';
 
 const Hero = () => (
@@ -24,30 +23,87 @@ const Hero = () => (
     {/* Content */}
     <div className="relative">
       {/* Navigation Section with semi-transparent background */}
-      <Section yPadding="py-8">
-        <div className="flex items-center justify-between">
-          <div className="rounded-lg bg-white/10 p-2 shadow-lg backdrop-blur-sm md:p-3">
+      <Section yPadding="py-4">
+        <div className="flex flex-col items-center justify-between space-y-4 md:flex-row md:space-y-0">
+          <div className="rounded-lg bg-white/20 p-2 shadow-lg backdrop-blur-sm md:p-3">
             <Logo
               xl
               className="scale-75 drop-shadow-md sm:scale-90 md:scale-100 lg:scale-110"
             />
           </div>
 
+          <nav className="hidden rounded-full bg-white/10 px-6 py-3 shadow-lg backdrop-blur-sm md:block">
+            <ul className="flex space-x-8 text-lg font-medium text-white">
+              <li>
+                <Link
+                  href="#"
+                  className="border-b-2 border-transparent transition-all duration-300 hover:text-primary-300"
+                >
+                  Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#services"
+                  className="border-b-2 border-transparent transition-all duration-300 hover:text-primary-300"
+                >
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#testimonials"
+                  className="border-b-2 border-transparent transition-all duration-300 hover:text-primary-300"
+                >
+                  Testimonials
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="#contact"
+                  className="border-b-2 border-transparent transition-all duration-300 hover:text-primary-300"
+                >
+                  Contact
+                </Link>
+              </li>
+            </ul>
+          </nav>
+
           <Link
             href="tel:+1(267) 774-1222"
-            className="font-['Helvetica'] text-sm font-light tracking-wide text-white drop-shadow-md transition-colors hover:text-tertiary sm:text-base md:text-xl lg:text-2xl"
+            className="font-['Helvetica'] text-sm font-light tracking-wide text-white drop-shadow-md transition-colors hover:text-primary-300 sm:text-base md:text-xl lg:text-2xl"
           >
             +1(267) 774-1222
           </Link>
         </div>
+
+        {/* Mobile menu button - only visible on small screens */}
+        <div className="mt-4 flex justify-center md:hidden">
+          <button className="rounded-md bg-primary-500 px-4 py-2 text-white shadow-md">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="size-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+          </button>
+        </div>
       </Section>
 
       {/* Hero Content */}
-      <Section yPadding="pt-24 pb-40">
+      <Section yPadding="pt-16 pb-32 md:pt-24 md:pb-40">
         <HeroOneButton
           title={
             <>
-              <span className="text-shadow-lg text-4xl font-bold text-primary-500 md:text-5xl lg:text-6xl">
+              <span className="text-shadow-lg text-4xl font-bold text-primary-300 md:text-5xl lg:text-6xl">
                 Building Dreams Into Reality
               </span>
             </>
@@ -61,7 +117,7 @@ const Hero = () => (
             <Link href="#contact">
               <Button
                 xl={true}
-                className="mt-8 px-8 py-4 text-lg shadow-lg transition-all duration-300 hover:scale-105 hover:bg-primary-600 focus:ring-4 focus:ring-primary-300"
+                className="mt-8 bg-primary-500 px-8 py-4 text-lg shadow-lg transition-all duration-300 hover:scale-105 hover:bg-primary-600 focus:ring-4 focus:ring-primary-300"
               >
                 Get a Free Quote
               </Button>

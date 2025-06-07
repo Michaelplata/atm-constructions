@@ -13,7 +13,7 @@ const Banner = () => (
         <Link href="#contact">
           <Button
             xl
-            className="px-8 py-4 text-lg font-medium shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
+            className="bg-primary-500 px-8 py-4 text-lg font-medium shadow-lg transition-all duration-300 hover:scale-105 hover:bg-primary-600 hover:shadow-xl"
           >
             Get a Free Quote
           </Button>

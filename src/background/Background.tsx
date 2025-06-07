@@ -5,10 +5,15 @@ type IBackgroundProps = {
   color: string;
   style?: CSSProperties;
   className?: string;
+  id?: string;
 };
 
 const Background = (props: IBackgroundProps) => (
-  <div className={`w-full ${props.className}`} style={props.style}>
+  <div
+    className={`w-full ${props.color} ${props.className || ''}`}
+    style={props.style}
+    id={props.id}
+  >
     {props.children}
   </div>
 );

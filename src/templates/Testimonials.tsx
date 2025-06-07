@@ -5,7 +5,7 @@ import { Background } from '../background/Background';
 import { Section } from '../layout/Section';
 
 const Testimonials = () => (
-  <Background color="bg-[#2B558B]">
+  <Background color="bg-secondary-500" id="testimonials">
     <Section>
       <div className="px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-7xl">
@@ -13,7 +13,7 @@ const Testimonials = () => (
             <h2 className="mb-4 text-3xl font-bold text-white">
               What Our Clients Say
             </h2>
-            <p className="mx-auto max-w-2xl text-lg text-[#8C9BB4]">
+            <p className="mx-auto max-w-2xl text-lg text-gray-200">
               Discover why homeowners and businesses trust ATM Constructions for
               their renovation needs
             </p>
@@ -48,11 +48,11 @@ const Testimonials = () => (
               ].map((testimonial, index) => (
                 <div
                   key={index}
-                  className="rounded-xl border-b-4 border-tertiary bg-white p-8 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
+                  className="rounded-xl border-b-4 border-primary-500 bg-white p-8 shadow-xl transition-all duration-300 hover:scale-105 hover:shadow-2xl"
                 >
                   <div className="mb-4 flex items-center justify-between">
                     <svg
-                      className="size-10 text-tertiary"
+                      className="size-10 text-primary-500"
                       fill="currentColor"
                       viewBox="0 0 24 24"
                     >
@@ -62,7 +62,7 @@ const Testimonials = () => (
                       {[1, 2, 3, 4, 5].map((star) => (
                         <svg
                           key={star}
-                          className="size-5 text-yellow-400"
+                          className="size-5 text-tertiary-500"
                           fill="currentColor"
                           viewBox="0 0 20 20"
                         >
@@ -79,15 +79,15 @@ const Testimonials = () => (
                   <div className="flex items-center border-t border-gray-200 pt-4">
                     <div className="mr-4 size-12 overflow-hidden rounded-full bg-gray-200">
                       {/* Placeholder for profile image */}
-                      <div className="flex size-full items-center justify-center bg-primary-300 text-xl font-bold text-white">
+                      <div className="flex size-full items-center justify-center bg-secondary-300 text-xl font-bold text-white">
                         {testimonial.author.charAt(0)}
                       </div>
                     </div>
                     <div>
-                      <p className="font-bold text-[#2B558B]">
+                      <p className="font-bold text-secondary-500">
                         {testimonial.author}
                       </p>
-                      <p className="text-sm text-[#6A8AB2]">
+                      <p className="text-sm text-secondary-400">
                         {testimonial.role} • {testimonial.location}
                       </p>
                     </div>
@@ -98,10 +98,10 @@ const Testimonials = () => (
 
             {/* Mobile View - Single Column */}
             <div className="md:hidden">
-              <div className="rounded-xl border-b-4 border-tertiary bg-white p-8 shadow-xl">
+              <div className="rounded-xl border-b-4 border-primary-500 bg-white p-8 shadow-xl">
                 <div className="mb-4 flex items-center justify-between">
                   <svg
-                    className="size-10 text-tertiary"
+                    className="size-10 text-primary-500"
                     fill="currentColor"
                     viewBox="0 0 24 24"
                   >
@@ -111,7 +111,7 @@ const Testimonials = () => (
                     {[1, 2, 3, 4, 5].map((star) => (
                       <svg
                         key={star}
-                        className="size-5 text-yellow-400"
+                        className="size-5 text-tertiary-500"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -129,13 +129,15 @@ const Testimonials = () => (
 
                 <div className="flex items-center border-t border-gray-200 pt-4">
                   <div className="mr-4 size-12 overflow-hidden rounded-full bg-gray-200">
-                    <div className="flex size-full items-center justify-center bg-primary-300 text-xl font-bold text-white">
+                    <div className="flex size-full items-center justify-center bg-secondary-300 text-xl font-bold text-white">
                       S
                     </div>
                   </div>
                   <div>
-                    <p className="font-bold text-[#2B558B]">Sarah Johnson</p>
-                    <p className="text-sm text-[#6A8AB2]">
+                    <p className="font-bold text-secondary-500">
+                      Sarah Johnson
+                    </p>
+                    <p className="text-sm text-secondary-400">
                       Homeowner • Philadelphia
                     </p>
                   </div>
@@ -188,7 +190,7 @@ const Testimonials = () => (
           <div className="mt-12 text-center">
             <Link
               href="#contact"
-              className="inline-flex items-center rounded-md border border-transparent bg-tertiary px-6 py-3 text-base font-medium text-white transition-colors duration-300 hover:bg-[#b4604f]"
+              className="inline-flex items-center rounded-md border border-transparent bg-primary-500 px-6 py-3 text-base font-medium text-white shadow-md transition-colors duration-300 hover:bg-primary-600"
             >
               Get Your Free Quote Today
             </Link>

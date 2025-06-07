@@ -5,6 +5,7 @@ const VerticalFeatures = () => (
   <Section
     title="Our Services"
     description="Comprehensive Construction Services for Homes and Businesses"
+    id="services"
   >
     <div className="mt-10 space-y-20">
       <VerticalFeatureRow
